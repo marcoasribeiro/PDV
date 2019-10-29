@@ -20,7 +20,11 @@ public class AtualizarProduto implements Comando {
      	produto.setNome(scanner.nextLine());
      	
  		System.out.println("Digite o novo valor do produto: ");
+                scanner.nextLine();
  		produto.setValor(scanner.nextDouble()) ;
+                
+                System.out.println("Digite o nova quantidade do produto: ");
+ 		produto.setQuantidade(scanner.nextInt()) ;
  		
  		DAO.atualizar(produto);   
 	}

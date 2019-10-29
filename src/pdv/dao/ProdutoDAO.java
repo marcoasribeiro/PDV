@@ -23,6 +23,7 @@ public class ProdutoDAO {
 			ps.setInt(1, produto.getId()); // vai pegar o primeiro parametro ? e colocar o id por isso setInt
 			ps.setString(2, produto.getNome());
 			ps.setDouble(3, produto.getValor());
+                        ps.setDouble(4, produto.getQuantidade());
 			ps.executeUpdate(); //� executeUpdate pois quando nos modificamos o estado do bando sempre vai ser update
 								// se for inserir, editar, excluir � update .. s� consulta se que query
 			conn.close();
